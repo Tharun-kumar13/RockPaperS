@@ -78,6 +78,36 @@
             bottom: 10px;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
+
+        .links button {
+            width: 100px;
+            height: 40px;
+            background-color: rgb(163, 225, 162);
+            border-radius: 5px;
+            font-weight: 600;
+            transition: 0.5s;
+
+        }
+
+        .links button:hover {
+            transform: scale(1.2);
+            box-shadow: 0px 5px 10px 0px blue;
+        }
+
+        #bt2 {
+            width: 100px;
+            height: 40px;
+            background-color: rgb(200, 98, 86);
+            border-radius: 5px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        #bt2:hover {
+            transition: 0.5s;
+
+            transform: scale(1.2);
+        }
     </style>
 </head>
 
@@ -85,11 +115,11 @@
 
     <body>
         <div class="box">
-            <h2>Rock Paper Secior</h2>
+            <h2>Rock Paper Scissor</h2>
             <p>Wanna Play a Game </p>
             <div class="links">
-                <p class="tab-links" onclick="opentab('Single')">Single Player</p>
-                <p class="tab-links" onclick="opentab('multi')">Multi-Player</p>
+                <p class="tab-links" onclick="opentab('Single')"><button> Single Player</button></p>
+                <p class="tab-links" onclick="multi()"><button> Multi Player</button></p>
             </div>
             <div class="tab-content" id="Single">
                 <button onclick="start()" class="btn"> <img src="./rock.png" class="icon"></button>
@@ -100,10 +130,10 @@
                 <br><br>
                 <p id="score">wins : Ties : Loses : </p>
             </div>
-            <button onclick="
+            <button id="bt2" onclick="
             restart()
         ">Restart</button>
-            <button onclick="auto()">Auto Play</button>
+            <button id="bt2" onclick="auto()">Auto Play</button>
             <br>
             <p1 id="auto">Auto Play : </p1>
             <br>
@@ -254,7 +284,9 @@
 
 
 
-
+            function multi() {
+                alert("Sorry Multiple Player was Not yet Developed...")
+            }
         </script>
 
     </body>
